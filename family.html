@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-family">
+
+<header class="fixed-header">
+    <div class="header-left" id="current-date"></div>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-right" id="current-time"></div>
+</header>
+
+<main class="family-container">
+
+    <h1 class="family-title">My Family Tree</h1>
+
+    <!-- TOP: Parents -->
+    <div class="parents-row">
+
+        <div class="family-card">
+            <img src="image/abah.jpg" class="family-img">
+	    <h4>Father</h4>
+            <h3>Syafiz bin Mohammad Samin</h3>
+            <p>48 Years Old</p>
+        </div>
+
+        <div class="family-card">
+            <img src="image/ibu.jpg" class="family-img">
+	    <h4>Mother</h4>
+            <h3>Norasyikin binti Arshad</h3>
+            <p>44 Years Old</p>
+        </div>
+    </div>
+
+    <!-- Connecting line -->
+    <div class="family-line"></div>
+
+    <!-- CHILDREN -->
+    <div class="children-row">
+
+        <div class="family-card">
+            <img src="image/profile.jpg" class="family-img">
+	    <h4>Eldest Brother</h4>
+            <h3>Muhammad Syariz Izzuddin</h3>
+            <p>20 Years Old</p>
+        </div>
+
+        <div class="family-card">
+            <img src="image/danish.jpg" class="family-img">
+	    <h4>Second Brother</h4>
+            <h3>Muhammad Syadanish</h3>
+            <p>17 Years Old</p>
+        </div>
+
+        <div class="family-card">
+            <img src="image/eca.jpg" class="family-img">
+	    <h4>Little Sister</h4>
+            <h3>Syazfiera Aleesya</h3>
+            <p>15 Years Old</p>
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>© 2025 Muhammad Syariz Izzuddin. All Rights Reserved.</p>
+	<p> Created: 1 December 2025 | Last updated: 17 December 2025
+        <p>You can contact me through this:</p>
+	<p>
+            📧 Email: <a href="mailto:2023457764@student.uitm.edu.my">2023457764@student.uitm.edu.my</a> |
+            📞 Phone: <a href="tel:+60195875135">+60 19-587 5135</a>
+        </p>
+    </div>
+</footer>
+
+
+<script>
+function updateDateTime() {
+    const d = document.getElementById("current-date");
+    const t = document.getElementById("current-time");
+
+    const now = new Date();
+    const dateOptions = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+    d.textContent = now.toLocaleDateString('en-US', dateOptions);
+
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
+    const ampm = h >= 12 ? "PM" : "AM";
+    h = h % 12 || 12;
+
+    t.textContent = 
+        `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')} ${ampm}`;
+}
+
+setInterval(updateDateTime,1000);
+updateDateTime();
+</script>
+
+</body>
+</html>

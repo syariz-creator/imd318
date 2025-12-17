@@ -1,0 +1,968 @@
+/* ============================================================
+   GLOBAL STYLE (APPLIES TO ALL PAGES EXCEPT HOME)
+   ============================================================ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    color: #1a1a1a;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+h1 {
+    text-align: center;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+
+/* ============================================================
+   TABLE STYLING (BIODATA & OTHER PAGES)
+   ============================================================ */
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 12px rgba(0,0,0,0.15);
+    color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #cccccc;
+    vertical-align: top;
+}
+
+td.title {
+    font-weight: bold;
+    width: 30%;
+    background-color: #e0e0e0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+
+/* ============================================================
+   NAVIGATION BAR (GLOBAL)
+   ============================================================ */
+header {
+    background-color: #2c2c2e;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar li a:hover {
+    color: #9d9dff;
+}
+
+/* ============================
+   SOCIAL MEDIA ICONS (HOME)
+============================ */
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* ============================
+   SOCIAL MEDIA SECTION
+============================ */
+
+.social-section {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* Text above icons */
+.social-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Icon row */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px 0;
+    background-color: #2c2c2e;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid #3a3a3c;
+}
+
+
+/* ============================================================
+   HOME PAGE (index.html ONLY)
+   ============================================================ */
+.home-bg {
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center text container */
+.hero-container {
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* Big dynamic intro font */
+.hero-title {
+    font-size: 70px;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: 2px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 35px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Homepage links */
+.home-links {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.home-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+
+    /* Restore original animation */
+    opacity: 0;
+    animation: fadeInButtons 0.8s ease-out forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Button animation delay */
+.home-links a:nth-child(1) { animation-delay: 1.2s; }
+.home-links a:nth-child(2) { animation-delay: 1.4s; }
+.home-links a:nth-child(3) { animation-delay: 1.6s; }
+.home-links a:nth-child(4) { animation-delay: 1.8s; }
+.home-links a:nth-child(5) { animation-delay: 2.0s; }
+
+.home-links a:hover {
+    transform: scale(1.08);
+    background-color: #3a3a3a;
+    color: #9d9dff;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.hero-subtitle {
+    animation: fadeSlideUp 1.4s ease-out forwards;
+}
+
+@keyframes fadeInButtons {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   SOCIAL ICON ENTRANCE ANIMATION
+============================ */
+
+@keyframes iconDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-icons a {
+    opacity: 0;
+    animation: iconDrop 0.6s ease-out forwards;
+}
+
+/* Stagger effect */
+.social-icons a:nth-child(1) { animation-delay: 0.2s; }
+.social-icons a:nth-child(2) { animation-delay: 0.4s; }
+.social-icons a:nth-child(3) { animation-delay: 0.6s; }
+
+
+/* ============================================================
+   FIXED HEADER
+   ============================================================ */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #2c2c2e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.header-left, .header-right {
+    font-weight: bold;
+    font-size: 17px;
+    color: white !important;
+}
+
+
+/* ============================================================
+   BIODATA PAGE LAYOUT — FIXED & CLEANED
+   ============================================================ */
+/* MAIN LAYOUT */
+.biodata-layout {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column; /* STACK SECTIONS */
+    align-items: center;
+    gap: 40px;
+}
+
+/* PROFILE SECTION */
+.profile-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* IMAGE */
+.biodata-image img {
+    width: 260px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* BIODATA TABLE */
+.biodata-table table {
+    width: 600px;
+}
+
+/* SONGS & MOVIES ROW */
+.media-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* SPOTIFY */
+.media-row iframe {
+    width: 320px;
+    border-radius: 10px;
+}
+
+/* MOVIE VIDEOS */
+.media-row video {
+    width: 240px;
+    border-radius: 12px;
+}
+
+/* Titles */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* ===== RIGHT COLUMN (Biodata table) ===== */
+.right-column {
+    width: 700px;
+}
+
+.biodata-table {
+    max-width: 600px;
+}
+
+.biodata-table table {
+    width: 600px;
+    font-size: 16px;
+}
+
+.biodata-table h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ============================================================
+   EXPERIENCE PAGE CARDS
+   ============================================================ */
+
+.exp-card {
+    width: 80%;
+    margin: 20px auto;
+    background: #ffffff;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+}
+
+.exp-img {
+    width: 260px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+.exp-info {
+    flex: 1;
+}
+
+.exp-info h2 {
+    margin-top: 0;
+    color: #1a1a1a;
+    font-size: 24px;
+}
+
+.exp-info p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.exp-info ul {
+    margin-top: 6px;
+    margin-left: 18px;
+}
+
+.exp-info li {
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+      FAMILY TREE PAGE (UPDATED)
+================================ */
+
+.family-container {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.family-title {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.parents-row,
+.children-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+/* Smaller card size */
+.family-card {
+    background: #ffffff;
+    padding: 15px;
+    width: 180px;                     /* smaller */
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+/* Square image */
+.family-img {
+    width: 100%;
+    height: 180px;                    /* fixed height to match width */
+    object-fit: cover;                /* keeps face centered */
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Text under image */
+.family-card h3 {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.family-card p {
+    margin: 3px 0 0;
+    font-size: 14px;
+}
+
+/* Line between parents and children */
+.family-line {
+    width: 200px;
+    height: 3px;
+    background-color: #444;
+    margin: 0 auto 35px auto;
+    border-radius: 3px;
+}
+
+/* ============================================================
+   EDUCATION PAGE — SAME SIZE & STYLE AS EXPERIENCE PAGE
+   ============================================================ */
+
+.exp-container {
+    margin-top: 120px; 
+    margin-bottom: 90px;
+    padding: 20px;
+}
+
+.exp-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+/* Same box width as EXPERIENCE */
+.exp-box {
+    display: flex;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px auto;
+    width: 90%;
+    max-width: 1100px;    /* <-- SAME AS EXPERIENCE */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    gap: 20px;
+    align-items: center;
+}
+
+/* Left side images (2 images stacked) */
+.exp-images {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 40%;            /* <-- MATCHED with Experience */
+}
+
+.exp-images img {
+    width: 100%;
+    height: 200px;         /* <-- SAME height as Experience images */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Right side description */
+.exp-text {
+    width: 60%;            /* <-- SAME as Experience */
+    padding: 10px;
+}
+
+.exp-text h2 {
+    margin: 0 0 10px 0;
+    color: #1a1a1a;
+    font-size: 24px;
+}
+
+.exp-text p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ==============================
+   GALLERY PAGE STYLE
+============================== */
+
+.gallery-container {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+/* Gallery grid */
+.gallery-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Gallery item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hide checkbox */
+.gallery-item input {
+    display: none;
+}
+
+/* Image */
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+/* Caption */
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.35s ease;
+    border-radius: 0 0 12px 12px;
+}
+
+/* HOVER EFFECT (desktop) */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CLICK EFFECT (mobile + desktop) */
+.gallery-item input:checked + label .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================
+   MASONRY GALLERY
+============================ */
+.gallery-container {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Masonry layout */
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Gallery item */
+.gallery-item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+/* Caption */
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================
+   FULLSCREEN POPUP
+============================ */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    text-align: center;
+}
+
+.popup img {
+    max-width: 85%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+.popup p {
+    color: white;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* Show popup */
+.popup:target {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Close button */
+.popup .close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 900px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+}
+
+/* ============================
+   STICKY FOOTER (PROPER WAY)
+============================ */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push footer to bottom */
+main {
+    flex: 1;
+}
+
+/* Footer styling */
+.site-footer {
+    background-color: #2c2c2e;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+
+.site-footer a {
+    color: #9d9dff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   BACKGROUND IMAGES (ALL PAGES)
+================================ */
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Individual page backgrounds */
+
+.bg-home {
+    background-image: url("image/background.jpg");
+}
+
+.bg-biodata {
+    background-image: url("image/background.jpg");
+}
+
+.bg-experience {
+    background-image: url("image/background.jpg");
+}
+
+.bg-education {
+    background-image: url("image/background.jpg");
+}
+
+.bg-family {
+    background-image: url("image/background.jpg");
+}
+
+.bg-gallery {
+    background-image: url("image/background.jpg");
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35); /* dark overlay */
+    z-index: -1;
+}
+
+/* ===== EXPERIENCE PAGE (SEPARATE BOXES) ===== */
+.experience-row {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+/* Shared box style */
+.experience-box {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    padding: 20px;
+}
+
+/* LEFT BOX */
+.info-box {
+    flex: 1.3;
+}
+
+.work-info h2 {
+    margin-bottom: 10px;
+}
+
+.work-info ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* RIGHT BOX */
+.map-box {
+    flex: 0.7;
+    text-align: center;
+}
+
+.map-box img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.map-note {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #555;
+}
+
+.map-frame {
+    width: 100%;
+    height: 260px;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* ===== EXPERIENCE BOX LAYOUT ===== */
+.info-box {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* LEFT SIDE IMAGES */
+.info-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Same size images */
+.work-img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* RIGHT SIDE (CENTER CONTENT) */
+.info-right {
+    flex: 1;
+    display: flex;
+    align-items: center;   /* vertical center */
+}
+
+/* Center text block */
+.info-center {
+    width: 100%;
+}
+
+/* Custom marker for Kini */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+}
+
+.custom-list li::before {
+    content: "🛒";
+    position: absolute;
+    left: 0;
+}
+
+.exp-images {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 40%;
+}
+
+.exp-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+

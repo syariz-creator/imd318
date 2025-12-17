@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+
+    <!-- Prevent cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+
+    <!-- Prevent cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-biodata">
+
+    <!-- 🔹 NAV BAR WITH LIVE DATE & TIME -->
+    <header class="fixed-header">
+        <div class="header-left" id="current-date"></div>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right" id="current-time"></div>
+    </header>
+	
+	<main class="biodata-layout">
+
+    <!-- TOP SECTION: IMAGE + BIODATA -->
+    <div class="profile-section">
+
+        <div class="biodata-image">
+            <img src="image/profile.jpg" alt="Profile Photo">
+        </div>
+
+        <div class="biodata-table">
+            <h1>My Profile</h1>
+            <table>
+                <tr>
+                    <td class="title">Full Name</td>
+                    <td>Muhammad Syariz Izzuddin bin Syafiz</td>
+                </tr>
+                <tr>
+                    <td class="title">Age</td>
+                    <td>20 Years Old</td>
+                </tr>
+                <tr>
+                    <td class="title">Place of Birth</td>
+                    <td>Hospital Sultanah Aminah, Johor</td>
+                </tr>
+                <tr>
+                    <td class="title">Date of Birth</td>
+                    <td>17 December 2005</td>
+                </tr>
+                <tr>
+                    <td class="title">Religion</td>
+                    <td>Islam</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- SONGS -->
+    <section class="fav-songs">
+        <h2 class="section-title">🎵 My Favourite Songs</h2>
+
+        <div class="media-row">
+            <iframe src="https://open.spotify.com/embed/track/1oAwsWBovWRIp7qLMGPIet" height="90"></iframe>
+            <iframe src="https://open.spotify.com/embed/track/2JN3ugW1cEahbYw0I5mw5U" height="90"></iframe>
+            <iframe src="https://open.spotify.com/embed/track/0aVd7QiY8BstysHb62c5Fi" height="90"></iframe>
+        </div>
+    </section>
+
+    <!-- MOVIES -->
+    <section class="fav-movies">
+        <h2 class="section-title">🎬 My Favourite Movies</h2>
+
+        <div class="media-row">
+            <video src="video/OP.mp4" controls></video>
+            <video src="video/JJK.mp4" controls></video>
+            <video src="video/DS.mp4" controls></video>
+        </div>
+    </section>
+
+</main>
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+        <p>© 2025 Muhammad Syariz Izzuddin. All Rights Reserved.</p>
+	<p>Created: 1 December 2025 | Last updated: 17 December 2025</p>
+        <p>You can contact me through this:</p>
+	<p>
+            📧 Email: <a href="mailto:2023457764@student.uitm.edu.my">2023457764@student.uitm.edu.my</a> |
+            📞 Phone: <a href="tel:+60195875135">+60 19-587 5135</a>
+        </p>
+    </div>
+</footer>
+
+
+    <!-- 🔹 LIVE DATE & TIME SCRIPT (AM/PM FIXED) -->
+    <script>
+    function updateDateTime() {
+        const dateElement = document.getElementById("current-date");
+        const timeElement = document.getElementById("current-time");
+
+        const now = new Date();
+
+        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = now.toLocaleDateString('en-US', dateOptions);
+
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        const ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12 || 12;
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        timeElement.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+    }
+
+    setInterval(updateDateTime, 1000)
+    updateDateTime();
+    </script>
+
+    </body>	
+    </html>
+
+   

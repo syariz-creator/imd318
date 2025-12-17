@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+
+    <!-- Prevent cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-experience">
+
+
+    <!-- 🔹 FIXED HEADER -->
+    <header class="fixed-header">
+        <div class="header-left" id="current-date"></div>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right" id="current-time"></div>
+    </header>
+
+	<!-- MAIN CONTENT-->
+
+    <main style="margin-top: 120px; margin-bottom: 80px;">
+
+    <h1 style="text-align:center; margin-bottom:40px;">My Working Experience</h1>
+
+    <!-- ⭐ EXPERIENCE — JKR -->
+<section class="experience-row">
+
+    <!-- LEFT BOX -->
+	<div class="experience-box info-box">
+
+    <div class="info-left">
+        <img src="image/jkr.jpg" alt="JKR Kota Tinggi" class="work-img">
+        <img src="image/jkr1.jpg" alt="JKR Office Area" class="work-img">
+    </div>
+
+    <div class="info-right">
+        <div class="info-center">
+            <h2>Internship  JKR Kota Tinggi</h2>
+
+            <p><strong>Duration:</strong> 28 July 2025 – 19 September 2025</p>
+            <p><strong>Position:</strong> Internship Trainee</p>
+
+            <ul>
+                <li>Handled and managed department records</li>
+                <li>Organized filing systems and documentation</li>
+                <li>Assisted staff with administrative tasks</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+        <!-- RIGHT BOX (GOOGLE MAP) -->
+    <div class="experience-box map-box">
+        <h3>📍 JKR Kota Tinggi Location</h3>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7975.991632595167!2d103.88867476977535!3d1.7318563000000111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6088d7cf8ef1%3A0xd96f8de904dec2d5!2sPublic%20Works%20Department%20Kota%20Tinggi!5e0!3m2!1sen!2smy!4v1765825675438!5m2!1sen!2smy"
+            loading="lazy"
+            allowfullscreen
+            class="map-frame">
+        </iframe>
+    </div>
+
+</section>
+
+   <!-- ⭐ EXPERIENCE — KINI SUPERMARKET -->
+<section class="experience-row">
+
+    <!-- LEFT BOX -->
+    <div class="experience-box info-box">
+
+    <div class="info-left">
+        <img src="image/kini.jpg" alt="Kini Supermarket" class="work-img">
+        <img src="image/kini1.jpg" alt="Inside Kini Supermarket" class="work-img">
+    </div>
+
+    <div class="info-right">
+        <div class="info-center">
+            <h2>Part Time  Kini Supermarket Kota Tinggi</h2>
+
+            <p><strong>Duration:</strong> 6 Months</p>
+            <p><strong>Position:</strong> Store Keeper</p>
+
+            <ul class="custom-list">
+                <li>Stock checking and inventory management</li>
+                <li>Organized goods and store layout</li>
+                <li>Assisted customers and maintained records</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+    <!-- RIGHT BOX (GOOGLE MAP) -->
+    <div class="experience-box map-box">
+        <h3>📍 Kini Supermarket Location</h3>
+
+        <iframe class="map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.0054949566024!2d103.89914607472541!3d1.7272511982568122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6090bfa0ca05%3A0xafe05aa8b8213bd5!2sKINI%20Supermarket%20Kota%20Tinggi!5e0!3m2!1sen!2smy!4v1765826110188!5m2!1sen!2smy"
+            loading="lazy">
+        </iframe>
+    </div>
+
+</section>
+
+</main>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+        <p>© 2025 Muhammad Syariz Izzuddin. All Rights Reserved.</p>
+	<p> Created: 1 December 2025 | Last updated: 17 December 2025
+        <p>You can contact me through this:</p>
+	<p>
+            📧 Email: <a href="mailto:2023457764@student.uitm.edu.my">2023457764@student.uitm.edu.my</a> |
+            📞 Phone: <a href="tel:+60195875135">+60 19-587 5135</a>
+        </p>
+    </div>
+</footer>
+
+    <!-- LIVE DATE & TIME -->
+    <script>
+        function updateDateTime() {
+            const dateElement = document.getElementById("current-date");
+            const timeElement = document.getElementById("current-time");
+
+            const now = new Date();
+
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = now.toLocaleDateString('en-US', dateOptions);
+
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            const ampm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12 || 12;
+
+            timeElement.textContent =
+                `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${ampm}`;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+
+</body>
+</html>
